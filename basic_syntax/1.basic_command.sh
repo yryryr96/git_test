@@ -68,3 +68,10 @@ git reset --soft head~1
 # push 이후의 취소 -> commit 메시지 작성 vi화면으로 이동
 # commit 내역 자체가 사라지지 않음. => 중요 정보 push시 중요 정보를 변경하기
 git revert 기존커밋ID
+
+# 작업중인 사항을 임시 저장(충돌 상황에서 많이 사용)
+# 스택구조로 변경 사항을 저장한다.
+git stash
+
+# 저장한 최신의 작업 목로을 꺼내기
+git stash pop

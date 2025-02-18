@@ -71,7 +71,16 @@ git revert 기존커밋ID
 
 # 작업중인 사항을 임시 저장(충돌 상황에서 많이 사용)
 # 스택구조로 변경 사항을 저장한다.
+# git stash는 working directory의 변경사항을 임시 저장할 떄 사용되는 명령어다.
+# 1. git stash 후 git pull, git stash pop -> 코드 병합
 git stash
-
 # 저장한 최신의 작업 목로을 꺼내기
 git stash pop
+# 임시저장한 목록은 그대로 놔둔채 특정 index항목 적용
+git stash apply 인덱스번호
+# 임시저장한 작업 내용 조회
+git stash show -p 인덱스번호
+# 임시저장한 작업 목록 조회
+git stash list
+# 저장 목록 모두 삭제
+git stash clear

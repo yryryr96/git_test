@@ -49,3 +49,22 @@ git pull origin 브랜치명
 
 # 원격에 변경사항을 local에 가져오되 병합은 하지 않는 것
 git fetch origin main/master
+
+# local main과 브랜치(origin/main)를 병합
+git merge 브랜치명
+
+# 변경사항 확인 (앞 커밋, 브랜치 기준)
+git diff commit1ID commit2ID
+git diff 브랜치1 브랜치2
+
+# git 작업 취소
+# commit 이후의 취소
+# 가장 최근 commit reset -> unstaged 상태로 변경
+git reset head~1
+git reset head^
+# staging area까지만 취소 -> staged 상태로 변경
+git reset --soft head~1
+
+# push 이후의 취소 -> commit 메시지 작성 vi화면으로 이동
+# commit 내역 자체가 사라지지 않음. => 중요 정보 push시 중요 정보를 변경하기
+git revert 기존커밋ID

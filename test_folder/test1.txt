@@ -4,6 +4,9 @@ hello world3
 hello world4
 hello world5
 hello world10
+hello world java
+hello world python
+hello world C++
 hello world java3
 hello world javascript
 hello world python3
